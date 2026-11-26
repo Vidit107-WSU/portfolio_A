@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* ---------- Task 1: Reset & Typography ---------- */
+
+* { margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; }
+
+body {
+  font-family: 'Inter', sans-serif;  
+  line-height: 1.6;                  
+  color: #333333;                    
+  background-color: #f5f5f5;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #990033;
+}
+
+footer {
+    text-align: center;
+    color: #666666;
+    font-size: 0.875rem;
+    padding: 2rem 1rem;
+    border-top: 1px solid #cccccc;
+}
+
+/* ---------- Task 2: Page Structure ---------- */
+
+header {
+    background-color: #990033;
+    color: #ffffff;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+header img {
+    height: 48px;
+}
+
+main {
+    max-width: 860px;
+    margin: 2rem auto 0;
+    padding: 0 1.5rem;
+}
+
+aside {
+    background-color: #fce8ee;
+    padding: 1.5rem;
+    border-radius: 6px;
+    margin-top: 2rem;
+}
+
+/* ---------- Task 3: Flexbox Nav & Interactive States ---------- */
+nav {
+    display: flex;
+    gap: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffccd5;
+    padding: 0.5rem 0.75rem;
+    border-radius: 4px;
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+nav a:not(:last-child) {
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+nav a:last-child {
+    border-right: none;
+}
+
+nav a:hover {
+    background-color: #770022;
+    color: #ffffff;
+}
+
+nav a:focus-visible {
+    outline: 2px solid #ff5c5e;
+    outline-offset: 2px;
+}
+
+/* ---------- Task 4: Form Styling ---------- */
+form {
+    background-color: #ffffff;
+    padding: 2rem;
+    border-radius: 8px;
+    border: 1px solid #cccccc;
+    max-width: 540px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 0.75rem;
+    align-items: center;
+}
+
+.hint {
+  grid-column: 1 / -1;
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+fieldset {
+  padding: 1rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+label {
+  font-weight: 600;
+  color: #333333;
+}
+
+input,
+select {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+}
+
+button {
+  background-color: #990033;
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 0.5rem 1.5rem;
+  cursor: pointer;
+  grid-column: 2;
+}
+
+button:hover {
+  background-color: #770022;
+}
+
+input:not(:placeholder-shown):valid {
+    border-color: #28a745;
+}
+
+input:not(:placeholder-shown):invalid {
+    border-color: #dc3545;
+}
+
+/* ---------- Task 5: Responsive Layout ---------- */
+@media (max-width: 600px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    main {
+        padding: 0 1rem;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    button {
+        grid-column: 1;
+        width: 100%;
+    }
+}

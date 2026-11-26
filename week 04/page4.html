@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Member Registration Portal</title>
+</head>
+<body>
+    <header>
+        <img src="logo.png" alt="site banner" width="50" height="50">
+        <h1>Community Member Registration Portal</h1>
+        <nav>
+       <a href="page1.html">Home (Page 1)</a>
+        <a href="page2.html">About Me (Page 2)</a>
+        <a href="page3.html">Markup Guide (Page 3)</a>
+        <a href="page4.html">Register (Page 4)</a>
+        </ul>
+        </nav>
+    </header>
+<hr>
+    <main>
+        <h2> Create Your Account</h2>
+        <form action="#" method="post">
+            
+            <fieldset>
+                <legend>Section 1: Personal Profile Information</legend>
+
+                <label for="fullname"> Full Legal Name *</label>
+                <input type="text" id="fullname" name="fullname" placeholder="e.g., Jane Smith" required>
+                Enter your first and last name as you would like them to appear on certificates. <br>
+
+                <label for="email"> Primary Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="jane.smith@example.com" required>
+                Your verification link and security alerts will be sent here. <br>
+
+                <label for="phone"> Phone Number (Format: 0412-345-678)</label>
+                <input type="tel" id="phone" name="phone" placeholder="0412-345-678" pattern="[0-9]{4}-[0-9]{3}-[0-9]{3}">
+                Optional. Used solely for two-factor authentication (2FA). <br>
+
+                <label for="dob"> Date of Birth </label>
+                <input type="date" id="dob" name="dob"> 
+
+                <label for="gender"> Gender Identity</label>
+                <select id="gender" name="gender">
+                    <option value="prefernot">Prefer not to say</option>
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="nonbinary">Non-binary</option>
+                    <option value="other">Other</option>
+                </select>
+
+            </fieldset>
+
+            <fieldset>
+                <legend> Section 2: Account Security & Plan Selection</legend>
+
+                <label for="username"> Preferred Username *</label>
+                <input type="text" id="username" name="username" placeholder="janesmith_dev" required> 
+
+                <label for="password"> Account Password (Min 8 chars)*</label>
+                <input type="password" id="password" name="password" minlength="8" required> 
+
+                Select Membership Tier* <br>
+                <input type="radio" id="free" name="tier" value="free" checked>
+                <label for="free">Community Tier Free forever. Public forums and guides.</label>
+
+                <input type="radio" id="pro" name="tier" value="pro">
+                <label for="pro">Pro Tier ($12/mo) Workshop recordings & code reviews.</label>
+
+                <input type="radio" id="enterprise" name="tier" value="enterprise">
+                <label for="enterprise">Enterprise ($49/mo) 1-on-1 mentorship & team support.</label>
+
+            </fieldset>
+
+            <fieldset>
+                <legend> Section 3: Communication Preferences & Legal Terms</legend>
+
+                <label for="role"> Primary Occupation /Professional Role</label>
+                <select id="role" name="role">
+                    <option value="student">Student</option>
+                    <option value="developer">Developer</option>
+                    <option value="designer">Designer</option>
+                    <option value="manager">Manager</option>
+                    <option value="other">Other</option>
+                </select><br>
+
+                Subscriptions & Email Updates <br>
+                <input type="checkbox" id="weekly" name="newsletter" value="weekly" checked>
+                <label for="weekly"> Weekly Technical Newsletter (Curated HTML/CSS articles)</label><br>
+                
+                <input type="checkbox" id="webinar" name="newsletter" value="webinar">
+                <label for="webinar"> Upcoming Live Webinars Announcements & Invites</label><br>
+
+                <input type="checkbox" id="updates" name="newsletter" value="updates">
+                <label for="updates"> Product Release Notes & Platform Security Updates</label><br>
+
+                <label for="bio"> Short Bio / Learning Goals</label>
+                <textarea id="bio" name="bio" rows="4" cols="20" placeholder="Tell us briefly about your web development goals or"></textarea><br>
+
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms"> I have read and agree to the <a href="#">Terms of Service</a> and Privacy Policy *</label><br>
+
+            </fieldset>
+
+            <button type="submit"> Submit Account Application</button>
+            <button type="reset"> Clear Form Entries</button><br>
+            <a href="page1.html">Return to Home Landing Page (Page 1)</a> Step 4 of 4
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 My Web Project. Page 4 of 4.</p>
+    </footer>
+<script src="js/form.js"></script>
+</body>
+</html>
